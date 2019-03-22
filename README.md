@@ -1,16 +1,20 @@
 ## Introduction
 
-This repository contains Kali Linux automated boostrap procedure with some basic DEV tools installed.
+This repository contains Kali Linux automated bootstrap procedure with some basic DEV tools installed.
 
-Bootstrap script `bootstrap_kali.sh` will install all basic tools (list below) to prepare system for work:
+The main script `bootstrap_kali.sh` will install all basic tools (list below) to prepare Kali as DEV environment:
 
-1. Install: 
-- `Python3` with `virtualenv`, `virtualenvwrapper`, `pipenv`
-- `vim` and `Visual Studio Code` with a list of pre-loaded extensions
-- `Docker` Community Edition, 
+1. Install:
+- `python3` with `python3-pip`, `virtualenv`, `virtualenvwrapper`, `pipenv`
+- `python-pip` with `virtualenvwrapper`
+- `vim` and `Visual Studio Code`
+- `Docker` Community Edition (CE),
 - `curl`, `terminator`
-- `Chromium` browser
-2. Full-Upgrade of the distribution on each subsequent call.
+- `chromium` browser
+1. Full-Upgrade of the distribution on each subsequent script trigger.
+
+Bootstrap procedure is [idempotent](https://whatis.techtarget.com/definition/idempotence)
+
 
 ## Getting started
 
@@ -23,9 +27,10 @@ Bootstrap script `bootstrap_kali.sh` will install all basic tools (list below) t
 
         su -
         cd <repository_root_dir>/kali-linux
-        chmod +x bootstrap_kali.sh
+        chmod +x bootstrap_kali.sh scripts/*.sh
         ./bootstrap_kali.sh
 
 ## Notes
 
-1. Git commits are following Karma, Git commit messages [naming convention](http://karma-runner.github.io/3.0/dev/git-commit-msg.html): 
+1. Git commits are following Karma, Git commit messages [naming convention](http://karma-runner.github.io/3.0/dev/git-commit-msg.html).
+2. The bootstrap procedure has been tested with `Kali GNU/Linux Rolling`, release `2019.1`.
