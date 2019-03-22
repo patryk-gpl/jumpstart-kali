@@ -16,6 +16,7 @@ rm -f $LOG_OUT $LOG_ERR 2>/dev/null
 
 $scripts_dir/create_default_user_group.sh
 $scripts_dir/install_default_tools.sh
+$scripts_dir/install_ansible_venvs.sh  # It requires Python3 that is installed with default tools
 $scripts_dir/install_docker.sh
 $scripts_dir/install_vscode.sh
 
