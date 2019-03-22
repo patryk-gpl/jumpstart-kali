@@ -21,13 +21,13 @@ apt-get install -y \
           vim \
           2>>$LOG_ERR
 
-eLog "Install apt-file"  
+eLog "Install apt-file"
 apt-get install -y \
           apt-file \
           2>>$LOG_ERR
 
 eLog "Update apt-file cache"
-apt-file update 
+apt-file update
 
 eLog "Install virtualenv, virtualenvwrapper, pipenv"
 pip install virtualenvwrapper

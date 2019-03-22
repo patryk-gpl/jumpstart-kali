@@ -33,18 +33,18 @@ function createVenv() {
   else
     local venv=$1
     local packages=$2
-   
+
     eLog "Checking installation status of virtualenv $venv"
     eLogShort "Virtualenv: $venv"
     eLogShort "Python packages: $packages"
-   
-    if [ ! -d $venv ]; then 
-      eLog 'Installing virtualenv (python3): ' $venv 
+
+    if [ ! -d $venv ]; then
+      eLog 'Installing virtualenv (python3): ' $venv
       virtualenv -p python3 $venv
       source $venv/bin/activate
       pip3 install $packages
       deactivate
-    else 
+    else
       eLog 'It seems requested virtualenv has been installed already'
     fi
   fi
