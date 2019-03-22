@@ -2,15 +2,29 @@
 
 This repository contains Kali Linux automated boostrap procedure with some basic DEV tools installed.
 
-Main bootstrap script will perform following actions:
+Bootstrap script `bootstrap_kali.sh` will install all basic tools (list below) to prepare system for work:
 
 1. Install: 
 - `Python3` with `virtualenv`, `virtualenvwrapper`, `pipenv`
-- `vim` and `Visual Studio Code`
+- `vim` and `Visual Studio Code` with a list of pre-loaded extensions
 - `Docker` Community Edition, 
-- `curl`
-2. Full-Upgrade of the distribution
+- `curl`, `terminator`
+- `Chromium` browser
+2. Full-Upgrade of the distribution on each subsequent call.
 
+## Getting started
+
+1. Clone the repository:
+
+        cd <repository_root_dir>
+        git clone git@github.com:patryk-gpl/kali-linux.git
+
+2. Switch to a root user and run the bootstrap script:
+
+        su -
+        cd <repository_root_dir>/kali-linux
+        chmod +x bootstrap_kali.sh
+        ./bootstrap_kali.sh
 
 ## Notes
 
