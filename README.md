@@ -11,7 +11,7 @@ The main script `bootstrap_kali.sh` will install all basic tools (list below) to
 - `Docker` Community Edition (CE),
 - `curl`, `terminator`
 - `chromium` browser
-1. Full-Upgrade of the distribution on each subsequent script trigger.
+2. Full-Upgrade of the distribution on each subsequent script trigger.
 
 Bootstrap procedure is [idempotent](https://whatis.techtarget.com/definition/idempotence)
 
