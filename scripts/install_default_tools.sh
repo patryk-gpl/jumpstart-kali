@@ -17,6 +17,8 @@ apt-get install -y \
           python-pip \
           python3-pip \
           python3.7 \
+          software-properties-common \
+          synaptic \
           terminator \
           vim \
           2>>$LOG_ERR
