@@ -2,6 +2,12 @@
 #
 # Common utility functions shared between various scripts
 
+function initLogs() {
+  rm -f $LOG_OUT $LOG_ERR 2>/dev/null
+  touch $LOG_OUT $LOG_ERR
+  chown $DEFAULT_USER:$DEFAULT_GROUP $LOG_OUT $LOG_ERR
+}
+
 function eLog() {
   echo
   echo "== $(date +'%Y-%m-%d %H:%M:%S') $@ ==" | tee -a $LOG_OUT

@@ -7,7 +7,6 @@ isPrivilegedUser
 
 readonly DEFAULT_GID=1000
 readonly DEFAULT_UID=1000
-readonly DEFAULT_GROUP=kali
 readonly DEFAULT_PASSWORD=kali
 
 if [[ "$(grep -c $DEFAULT_GID /etc/group)" -eq "0" ]]; then
